@@ -16,20 +16,28 @@ document.addEventListener("DOMContentLoaded", function () {
       options
     )
       .then((response) => response.json())
-      .then((response) => addPostsToDOM(response))
+      //The array is under the result key so I updated `addPostsToDOM(response)` to `addPostsToDOM(response.result)`
+      .then((response) => addPostsToDOM(response.result))
       .catch((err) => console.error(err));
   }
   getChuck();
 
   function addPostsToDOM(chuck) {
-    console.log(chuck);
+    // console.log(chuck);
     console.log("type of data: " + typeof chuck);
-    let output = "";
-    output = chuck.forEach((chuck) => {
-      console.log(chuck);
-      output += `<li>${chuck.value}</li>`;
+
+    chuck.forEach((chuck) => {
+      //create a new li element
+      const li = document.createElement("li");
+
+      //create a text string from chuck.value
+      const text = document.createTextNode(chuck.value);
+
+      //append the string to the li, same as what u did b4 `<li>${chuck.value}</li>`
+      li.appendChild(text);
+
+      //append the li with text into the ul in your html
+      document.getElementById("list").appendChild(li);
     });
-    document.getElementById("list").innerHTML = chuck.result;
   }
-  addPostsToDOM();
 });
