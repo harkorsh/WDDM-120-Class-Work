@@ -1,0 +1,1 @@
+I did it to be able to search the city but i have hardcoaded toronto just incase

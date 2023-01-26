@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Weather forecast</title>
+  </head>
+  <body>
+    <section class="vh-100">
+      <h1 class="jumbotron text-center">
+        Weather Forecast for your City Project by David Akoshile
+      </h1>
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-md-8 col-lg-6 col-xl-4">
+            <h3 class="mb-4 pb-2 fw-normal">
+              Check the weather forecast for
+              <span id="city-name">Your City</span>
+            </h3>
+
+            <form class="input-group rounded mb-3">
+              <input
+                type="search"
+                class="form-control rounded"
+                placeholder="City"
+                aria-label="Search"
+                aria-describedby="search-addon"
+                value="Type Your City"
+                id="city"
+              />
+              <a href="#!" type="button" id="check-city">
+                <span
+                  class="input-group-text border-0 fw-bold"
+                  id="search-addon"
+                >
+                  Check!
+                </span>
+              </a>
+            </form>
+
+            <div class="mb-4 pb-2">
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="inlineRadioOptions"
+                  id="inlineRadio1"
+                  value="option1"
+                  checked
+                />
+                <label class="form-check-label" for="inlineRadio1"
+                  >Celsius</label
+                >
+              </div>
+            </div>
+
+            <div class="card shadow-0 border">
+              <div class="card-body p-4">
+                <h4 class="mb-1 sfw-normal" id="city-name2">Your City</h4>
+                <p class="mb-2">
+                  Current temperature:
+                  <strong id="current-temp">5.42</strong><span>°C</span>
+                </p>
+                <p>
+                  Feels like: <strong id="feels-like">4.37</strong
+                  ><span>°C</span>
+                </p>
+                <p>
+                  Wind: m/h <strong id="wind-miles">6.11</strong>, Wind: km/h
+                  <strong id="wind-km">3.89</strong>
+                </p>
+
+                <div class="d-flex flex-row align-items-center">
+                  <p class="mb-0 me-4" id="overview">Scattered Clouds</p>
+                  <img id="image" src="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="index.js"></script>
+  </body>
+</html>
