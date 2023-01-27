@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Firebase</title>
+  </head>
+  <body>
+    <form id="form">
+      First Name:
+      <input type="text" id="firstName" />
+      <br />
+      last Name:
+      <input type="text" id="lastName" />
+      <br />
+      <input type="submit" value="Submit Form" />
+    </form>
+    <ul id="list"></ul>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyA3IF_V5nyXzSKjYN1EpehohTNwjRClVNc",
+        authDomain: "wddm-120-1cc75.firebaseapp.com",
+        projectId: "wddm-120-1cc75",
+        storageBucket: "wddm-120-1cc75.appspot.com",
+        messagingSenderId: "920195718523",
+        appId: "1:920195718523:web:2dfc4e2174fb01a7ac71de",
+      };
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="./scripts.js"></script>
+  </body>
+</html>
