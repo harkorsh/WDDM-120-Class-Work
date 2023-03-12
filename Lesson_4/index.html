@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Firebase</title>
+    <style>
+      .list {
+        list-style: none;
+      }
+      .list-item {
+        background: rgb(239, 239, 239);
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 30px;
+        width: fit-content;
+      }
+      .delete-btn {
+        color: red;
+        padding-inline: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="form">
+      Nickname:
+      <input type="text" id="nickname" />
+      <br />
+      <br />
+      Message:
+      <input type="text" id="message" />
+      <br />
+      <br />
+      <input type="submit" value="Send" />
+    </form>
+    <ul id="list"></ul>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyA3IF_V5nyXzSKjYN1EpehohTNwjRClVNc",
+        authDomain: "wddm-120-1cc75.firebaseapp.com",
+        projectId: "wddm-120-1cc75",
+        storageBucket: "wddm-120-1cc75.appspot.com",
+        messagingSenderId: "920195718523",
+        appId: "1:920195718523:web:2dfc4e2174fb01a7ac71de",
+      };
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="./scripts.js"></script>
+  </body>
+</html>
